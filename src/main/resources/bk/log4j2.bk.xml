@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <Configuration>
+
+	 <Properties>
+	    <Property name="default">[%d %p %c{1.}] %m%n</Property>
+	    <Property name ="verbose">[%d{HH:mm:ss.SSS} [%t] %-5level %logger{36}] - %msg%n</Property>
+	    <Property name ="default_with_method">[%d %p %c{1}.%M] %m%n</Property>
+	    <Property name="path">/opt/esb2plus/soapservice/Logs/LogDetail/</Property>
+	    <Property name="path_crm">ESB2PLUS_CRMServices.log</Property>
+	    <Property name="path_app">ESB2PLUS_CRM.log</Property>
+	  </Properties>
+
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="LogToFile" fileName="${path}${path_crm}">
+            <PatternLayout>
+                <Pattern>%m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <RollingFile name ="LogFile" fileName="${path}${path_app}" filePattern="${path}ESB2PLUS_CRM.%d{yyyy-MM-dd}.log">
+	      <Patternlayout>
+	        <Pattern>%m%n</Pattern>
+	      </Patternlayout>
+	      <Policies>
+	        <TimeBasedTriggeringPolicy />
+	        <SizeBasedTriggeringPolicy size="10 MB"/>
+	      </Policies>
+	      <DefaultRolloverStrategy max="20"/>
+	    </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.nt.th.esb" level="info" additivity="false">
+        	<AppenderRef ref="LogFile"/>
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="org.springframework.boot" level="error" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="error">
+        	<AppenderRef ref="LogFile"/>
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration> -->
